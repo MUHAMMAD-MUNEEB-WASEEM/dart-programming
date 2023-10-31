@@ -9,7 +9,7 @@ void main() {
 
   myc.printName('munee1');
 
-  var data = myc.addition(10, 8);
+  var data = myc.addition(10, 12);
   print(data);
 }
 
