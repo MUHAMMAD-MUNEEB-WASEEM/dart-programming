@@ -39,6 +39,19 @@ class _MyHomePageState extends State<MyHomePage> {
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           title: const Text("First Flutter App1"),
         ),
-        body: Center(child: Image.asset('../assets/images/image3.png')));
+        body: Center(
+          child: InkWell(
+            child: const Text('InkWell on click!b'),
+            onTap: () {
+              print("ontap inkwell");
+            },
+            onDoubleTap: () {
+              print("ondoubletap inkwell");
+            },
+            onLongPress: () {
+              print("onlongtap inkwell");
+            },
+          ),
+        ));
   }
 }
