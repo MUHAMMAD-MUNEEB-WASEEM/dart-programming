@@ -35,24 +35,18 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: const Text("First Flutter App1"),
-      ),
-      body: Center(
-          child: Container(
-        width: 200,
-        height: 100,
-        color: Colors.blueAccent,
-        child: const Center(
-            child: Text(
-          'Learning Container',
-          style: TextStyle(
-              color: Colors.white, fontWeight: FontWeight.w800, fontSize: 20),
-        )),
-      )),
-    );
+        appBar: AppBar(
+          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+          title: const Text("First Flutter App1"),
+        ),
+        body: TextButton(
+          onPressed: () {
+            print("Button clicked1");
+          },
+          child: const Text(
+            "Click here!!",
+            style: TextStyle(color: Colors.red),
+          ),
+        ));
   }
 }
