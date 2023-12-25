@@ -39,13 +39,16 @@ class _MyHomePageState extends State<MyHomePage> {
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           title: const Text("First Flutter App1"),
         ),
-        body: TextButton(
+        body: ElevatedButton(
           onPressed: () {
             print("Button clicked1");
           },
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.red,
+          ),
           child: const Text(
             "Click here!!",
-            style: TextStyle(color: Colors.red),
+            style: TextStyle(color: Colors.white),
           ),
         ));
   }
