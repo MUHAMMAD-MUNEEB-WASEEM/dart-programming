@@ -39,14 +39,6 @@ class _MyHomePageState extends State<MyHomePage> {
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           title: const Text("First Flutter App1"),
         ),
-        body: OutlinedButton(
-          onPressed: () {
-            print("Button clicked1");
-          },
-          child: const Text(
-            "Click here!!",
-            style: TextStyle(color: Colors.green),
-          ),
-        ));
+        body: Center(child: Image.asset('../assets/images/image3.png')));
   }
 }
