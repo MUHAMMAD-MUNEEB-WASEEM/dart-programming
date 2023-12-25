@@ -40,91 +40,17 @@ class _MyHomePageState extends State<MyHomePage> {
           title: const Text("First Flutter App1"),
         ),
         body: Padding(
-            padding: const EdgeInsets.all(10),
-            child: SingleChildScrollView(
-                child: Column(
+            padding: EdgeInsets.all(10),
+            child: ListView(
+              scrollDirection: Axis.horizontal,
               children: [
-                Padding(
-                    padding: EdgeInsets.only(bottom: 10),
-                    child: SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        child: Row(children: [
-                          Container(
-                            width: 600,
-                            height: 100,
-                            color: Colors.red,
-                            margin: EdgeInsets.only(right: 10),
-                          ),
-                          Container(
-                            width: 600,
-                            height: 100,
-                            color: Colors.yellow,
-                            margin: EdgeInsets.only(right: 10),
-                          ),
-                          Container(
-                            width: 600,
-                            height: 100,
-                            color: Colors.green,
-                            margin: EdgeInsets.only(right: 10),
-                          ),
-                          Container(
-                            width: 600,
-                            height: 100,
-                            color: Colors.blue,
-                            margin: EdgeInsets.only(right: 10),
-                          ),
-                        ]))),
-                Container(
-                  height: 100,
-                  color: Colors.yellow,
-                  margin: EdgeInsets.only(bottom: 10),
-                ),
-                Container(
-                  height: 100,
-                  color: Colors.green,
-                  margin: EdgeInsets.only(bottom: 10),
-                ),
-                Container(
-                  height: 100,
-                  color: Colors.blue,
-                  margin: EdgeInsets.only(bottom: 10),
-                ),
-                Container(
-                  height: 100,
-                  color: Colors.red,
-                  margin: EdgeInsets.only(bottom: 10),
-                ),
-                Container(
-                  height: 100,
-                  color: Colors.yellow,
-                  margin: EdgeInsets.only(bottom: 10),
-                ),
-                Container(
-                  height: 100,
-                  color: Colors.green,
-                  margin: EdgeInsets.only(bottom: 10),
-                ),
-                Container(
-                  height: 100,
-                  color: Colors.red,
-                  margin: EdgeInsets.only(bottom: 10),
-                ),
-                Container(
-                  height: 100,
-                  color: Colors.yellow,
-                  margin: EdgeInsets.only(bottom: 10),
-                ),
-                Container(
-                  height: 100,
-                  color: Colors.green,
-                  margin: EdgeInsets.only(bottom: 10),
-                ),
-                Container(
-                  height: 100,
-                  color: Colors.blue,
-                  margin: EdgeInsets.only(bottom: 10),
-                ),
+                Text("One", style: TextStyle(fontWeight: FontWeight.w700)),
+                Text("Two", style: TextStyle(fontWeight: FontWeight.w700)),
+                Text("Three", style: TextStyle(fontWeight: FontWeight.w700)),
+                Text("Four", style: TextStyle(fontWeight: FontWeight.w700)),
+                Text("Five", style: TextStyle(fontWeight: FontWeight.w700)),
+                Text("Six", style: TextStyle(fontWeight: FontWeight.w700)),
               ],
-            ))));
+            )));
   }
 }
