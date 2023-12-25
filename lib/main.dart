@@ -34,6 +34,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    var arrNames = ['muneeb', 'hammad', 'josh', 'john', 'doe'];
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
@@ -41,16 +42,13 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body: Padding(
             padding: EdgeInsets.all(10),
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              children: [
-                Text("One", style: TextStyle(fontWeight: FontWeight.w700)),
-                Text("Two", style: TextStyle(fontWeight: FontWeight.w700)),
-                Text("Three", style: TextStyle(fontWeight: FontWeight.w700)),
-                Text("Four", style: TextStyle(fontWeight: FontWeight.w700)),
-                Text("Five", style: TextStyle(fontWeight: FontWeight.w700)),
-                Text("Six", style: TextStyle(fontWeight: FontWeight.w700)),
-              ],
+            child: ListView.builder(
+              itemBuilder: (context, index) {
+                return Text(arrNames[index],
+                    style: TextStyle(color: Colors.red));
+              },
+              itemCount: arrNames.length,
+              itemExtent: 200,
             )));
   }
 }
