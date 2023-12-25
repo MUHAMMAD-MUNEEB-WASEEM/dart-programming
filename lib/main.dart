@@ -39,19 +39,78 @@ class _MyHomePageState extends State<MyHomePage> {
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           title: const Text("First Flutter App1"),
         ),
-        body: Center(
-          child: InkWell(
-            child: const Text('InkWell on click!b'),
-            onTap: () {
-              print("ontap inkwell");
-            },
-            onDoubleTap: () {
-              print("ondoubletap inkwell");
-            },
-            onLongPress: () {
-              print("onlongtap inkwell");
-            },
-          ),
-        ));
+        body: Padding(
+            padding: const EdgeInsets.all(10),
+            child: SingleChildScrollView(
+                child: Column(
+              children: [
+                Container(
+                  width: 200,
+                  height: 100,
+                  color: Colors.red,
+                  margin: EdgeInsets.only(bottom: 10),
+                ),
+                Container(
+                  width: 200,
+                  height: 100,
+                  color: Colors.yellow,
+                  margin: EdgeInsets.only(bottom: 10),
+                ),
+                Container(
+                  width: 200,
+                  height: 100,
+                  color: Colors.green,
+                  margin: EdgeInsets.only(bottom: 10),
+                ),
+                Container(
+                  width: 200,
+                  height: 100,
+                  color: Colors.blue,
+                  margin: EdgeInsets.only(bottom: 10),
+                ),
+                Container(
+                  width: 200,
+                  height: 100,
+                  color: Colors.red,
+                  margin: EdgeInsets.only(bottom: 10),
+                ),
+                Container(
+                  width: 200,
+                  height: 100,
+                  color: Colors.yellow,
+                  margin: EdgeInsets.only(bottom: 10),
+                ),
+                Container(
+                  width: 200,
+                  height: 100,
+                  color: Colors.green,
+                  margin: EdgeInsets.only(bottom: 10),
+                ),
+                Container(
+                  width: 200,
+                  height: 100,
+                  color: Colors.red,
+                  margin: EdgeInsets.only(bottom: 10),
+                ),
+                Container(
+                  width: 200,
+                  height: 100,
+                  color: Colors.yellow,
+                  margin: EdgeInsets.only(bottom: 10),
+                ),
+                Container(
+                  width: 200,
+                  height: 100,
+                  color: Colors.green,
+                  margin: EdgeInsets.only(bottom: 10),
+                ),
+                Container(
+                  width: 200,
+                  height: 100,
+                  color: Colors.blue,
+                  margin: EdgeInsets.only(bottom: 10),
+                ),
+              ],
+            ))));
   }
 }
