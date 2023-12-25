@@ -42,13 +42,15 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body: Padding(
             padding: EdgeInsets.all(10),
-            child: ListView.builder(
+            child: ListView.separated(
               itemBuilder: (context, index) {
                 return Text(arrNames[index],
                     style: TextStyle(color: Colors.red));
               },
               itemCount: arrNames.length,
-              itemExtent: 200,
+              separatorBuilder: (context, index) {
+                return Divider(height: 10, thickness: 2);
+              },
             )));
   }
 }
