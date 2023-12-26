@@ -40,21 +40,13 @@ class _MyHomePageState extends State<MyHomePage> {
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           title: const Text("First Flutter App1"),
         ),
-        body: ListView.separated(
-            itemBuilder: (context, index) {
-              return ListTile(
-                leading: Text('${index + 1}'),
-                title: Text(arrNames[index]),
-                subtitle: const Text('Number'),
-                trailing: const Icon(Icons.add),
-              );
-            },
-            separatorBuilder: (context, index) {
-              return const Divider(
-                height: 10,
-                thickness: 2,
-              );
-            },
-            itemCount: arrNames.length));
+        body: Center(
+            child: CircleAvatar(
+          backgroundImage: AssetImage('../assets/images/image2.png'),
+          backgroundColor: Colors.redAccent,
+          radius: 50,
+          // minRadius: 20,
+          // maxRadius: 50,
+        )));
   }
 }
