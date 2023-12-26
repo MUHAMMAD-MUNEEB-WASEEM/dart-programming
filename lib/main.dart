@@ -40,17 +40,22 @@ class _MyHomePageState extends State<MyHomePage> {
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           title: const Text("First Flutter App1"),
         ),
-        body: Padding(
-            padding: EdgeInsets.all(10),
-            child: ListView.separated(
-              itemBuilder: (context, index) {
-                return Text(arrNames[index],
-                    style: TextStyle(color: Colors.red));
-              },
-              itemCount: arrNames.length,
-              separatorBuilder: (context, index) {
-                return Divider(height: 10, thickness: 2);
-              },
-            )));
+        body: Container(
+            width: double.infinity,
+            height: double.infinity,
+            color: Colors.blue.shade50,
+            child: Center(
+                child: Container(
+              width: 150,
+              height: 150,
+              decoration: BoxDecoration(
+                  color: Colors.blue.shade800,
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                        blurRadius: 51, color: Colors.grey, spreadRadius: 21)
+                  ],
+                  border: Border.all(width: 2, color: Colors.black)),
+            ))));
   }
 }
