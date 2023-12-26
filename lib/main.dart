@@ -50,11 +50,12 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 150,
               decoration: BoxDecoration(
                   color: Colors.blue.shade800,
-                  borderRadius: BorderRadius.circular(20),
+                  // borderRadius: BorderRadius.circular(20),
                   boxShadow: [
                     BoxShadow(
                         blurRadius: 51, color: Colors.grey, spreadRadius: 21)
                   ],
+                  shape: BoxShape.circle,
                   border: Border.all(width: 2, color: Colors.black)),
             ))));
   }
