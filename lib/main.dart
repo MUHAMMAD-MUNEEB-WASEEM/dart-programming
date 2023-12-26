@@ -40,33 +40,21 @@ class _MyHomePageState extends State<MyHomePage> {
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           title: const Text("First Flutter App1"),
         ),
-        body: Column(
-          children: [
-            Expanded(
-              flex: 2,
-              child: Container(
-                height: 250,
-                color: Colors.lightBlue,
-              ),
-            ),
-            Expanded(
-                child: Container(
-              height: 250,
-              color: Colors.lightGreen,
-            )),
-            Expanded(
-              child: Container(
-                height: 250,
-                color: Colors.redAccent,
-              ),
-            ),
-            Expanded(
-                flex: 2,
-                child: Container(
-                  height: 250,
-                  color: Colors.yellowAccent,
-                )),
-          ],
-        ));
+        body: ListView.separated(
+            itemBuilder: (context, index) {
+              return ListTile(
+                leading: Text('${index + 1}'),
+                title: Text(arrNames[index]),
+                subtitle: const Text('Number'),
+                trailing: const Icon(Icons.add),
+              );
+            },
+            separatorBuilder: (context, index) {
+              return const Divider(
+                height: 10,
+                thickness: 2,
+              );
+            },
+            itemCount: arrNames.length));
   }
 }
