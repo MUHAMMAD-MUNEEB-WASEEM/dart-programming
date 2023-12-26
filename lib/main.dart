@@ -42,10 +42,13 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body: Row(
           children: [
-            Container(
-              width: 150,
-              height: 250,
-              color: Colors.lightBlue,
+            Expanded(
+              flex: 2,
+              child: Container(
+                width: 150,
+                height: 250,
+                color: Colors.lightBlue,
+              ),
             ),
             Expanded(
                 child: Container(
@@ -60,11 +63,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 color: Colors.redAccent,
               ),
             ),
-            Container(
-              width: 150,
-              height: 250,
-              color: Colors.yellowAccent,
-            )
+            Expanded(
+                flex: 2,
+                child: Container(
+                  width: 150,
+                  height: 250,
+                  color: Colors.yellowAccent,
+                )),
           ],
         ));
   }
