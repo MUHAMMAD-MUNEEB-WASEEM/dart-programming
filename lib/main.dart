@@ -42,11 +42,20 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body: Center(
             child: CircleAvatar(
-          backgroundImage: AssetImage('../assets/images/image2.png'),
-          backgroundColor: Colors.redAccent,
-          radius: 50,
-          // minRadius: 20,
-          // maxRadius: 50,
-        )));
+                radius: 100,
+                child: Container(
+                  width: 200,
+                  height: 200,
+                  child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          width: 50,
+                          height: 50,
+                          child: Image.asset('../assets/images/image2.png'),
+                        ),
+                        Text("image name")
+                      ]),
+                ))));
   }
 }
