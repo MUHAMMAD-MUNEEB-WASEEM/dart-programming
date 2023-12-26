@@ -40,25 +40,22 @@ class _MyHomePageState extends State<MyHomePage> {
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           title: const Text("First Flutter App1"),
         ),
-        body: Row(
+        body: Column(
           children: [
             Expanded(
               flex: 2,
               child: Container(
-                width: 150,
                 height: 250,
                 color: Colors.lightBlue,
               ),
             ),
             Expanded(
                 child: Container(
-              width: 150,
               height: 250,
               color: Colors.lightGreen,
             )),
             Expanded(
               child: Container(
-                width: 150,
                 height: 250,
                 color: Colors.redAccent,
               ),
@@ -66,7 +63,6 @@ class _MyHomePageState extends State<MyHomePage> {
             Expanded(
                 flex: 2,
                 child: Container(
-                  width: 150,
                   height: 250,
                   color: Colors.yellowAccent,
                 )),
