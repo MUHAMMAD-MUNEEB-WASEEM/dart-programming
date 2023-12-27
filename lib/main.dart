@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
           useMaterial3: true,
-          textTheme: TextTheme(
+          textTheme: const TextTheme(
               displayLarge:
                   TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
               titleMedium:
@@ -48,7 +48,10 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             Text(
               "Heading Large",
-              style: Theme.of(context).textTheme.displayLarge,
+              style: Theme.of(context)
+                  .textTheme
+                  .displayLarge!
+                  .copyWith(color: Colors.orange),
             ),
             Text(
               "Heading Small",
