@@ -1,3 +1,4 @@
+import 'package:first_test_app/ui_helper/util.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -59,10 +60,9 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Text(
               "Heading Large",
-              style: Theme.of(context).textTheme.displayLarge,
+              style: mTextStyle21(textColor: Colors.red),
             ),
-            Text("Heading Small",
-                style: Theme.of(context).textTheme.titleMedium),
+            Text("Heading Small", style: mTextStyle11()),
           ],
         ));
   }
