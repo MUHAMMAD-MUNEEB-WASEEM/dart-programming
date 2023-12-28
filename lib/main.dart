@@ -45,25 +45,11 @@ class _MyHomePageState extends State<MyHomePage> {
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           title: const Text("First Flutter App1"),
         ),
-        body: Column(
-          children: [
-            Text(
-              "Heading Large",
-              style: Theme.of(context)
-                  .textTheme
-                  .displayLarge!
-                  .copyWith(color: Colors.orange),
-            ),
-            Text(
-              "Heading Small",
-              style: Theme.of(context).textTheme.titleMedium,
-            ),
-            Text(
-              "Heading Large",
-              style: mTextStyle21(textColor: Colors.red),
-            ),
-            Text("Heading Small", style: mTextStyle11()),
-          ],
+        body: Card(
+          child: Padding(
+            padding: EdgeInsets.all(10),
+            child: Text('Hello World!'),
+          ),
         ));
   }
 }
