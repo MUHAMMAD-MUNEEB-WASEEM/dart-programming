@@ -1,5 +1,6 @@
 import 'package:first_test_app/ui_helper/util.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 void main() {
   runApp(const MyApp());
@@ -53,8 +54,13 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  Text('Current time is: ${DateFormat('Hms').format(time)}'),
                   Text(
-                      'Current time is:, $time, current day is: ${time.day}, current month is: ${time.month}'),
+                      'Current time is Am/pm: ${DateFormat('jms').format(time)}'),
+                  Text(
+                      'Current time is Am/pm: ${DateFormat('yMMMd').format(time)}'),
+                  Text(
+                      'Current time is Weekday: ${DateFormat('EEEE').format(time)}'),
                   ElevatedButton(
                       onPressed: () {
                         setState(() {});
