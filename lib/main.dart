@@ -48,26 +48,38 @@ class _MyHomePageState extends State<MyHomePage> {
           title: const Text("First Flutter App1"),
         ),
         body: Center(
-          child: Container(
-              width: 200,
-              height: 200,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text('Current time is: ${DateFormat('Hms').format(time)}'),
-                  Text(
-                      'Current time is Am/pm: ${DateFormat('jms').format(time)}'),
-                  Text(
-                      'Current time is Am/pm: ${DateFormat('yMMMd').format(time)}'),
-                  Text(
-                      'Current time is Weekday: ${DateFormat('EEEE').format(time)}'),
-                  ElevatedButton(
-                      onPressed: () {
-                        setState(() {});
-                      },
-                      child: Text("Current time"))
-                ],
-              )),
-        ));
+            child:
+                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          const Text(
+            "Selected date",
+            style: TextStyle(fontSize: 20),
+          ),
+          ElevatedButton(
+              onPressed: () async {
+                DateTime? datePicked = await showDatePicker(
+                    context: context,
+                    initialDate: DateTime.now(),
+                    firstDate: DateTime(2010),
+                    lastDate: DateTime(2025));
+
+                if (datePicked != null) {
+                  print("Date select: ${datePicked.year}");
+                }
+              },
+              child: const Text('Show date')),
+          ElevatedButton(
+              onPressed: () async {
+                TimeOfDay? timePicked = await showTimePicker(
+                    context: context,
+                    initialTime: TimeOfDay.now(),
+                    initialEntryMode: TimePickerEntryMode.input);
+
+                if (timePicked != null) {
+                  print(
+                      "Date select: ${timePicked.hour}: ${timePicked.minute}");
+                }
+              },
+              child: const Text('Show Time'))
+        ])));
   }
 }
