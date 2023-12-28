@@ -45,11 +45,14 @@ class _MyHomePageState extends State<MyHomePage> {
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           title: const Text("First Flutter App1"),
         ),
-        body: Card(
+        body: const Center(
+            child: Card(
+          shadowColor: Colors.blue,
+          elevation: 5,
           child: Padding(
             padding: EdgeInsets.all(10),
             child: Text('Hello World!'),
           ),
-        ));
+        )));
   }
 }
