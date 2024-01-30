@@ -38,6 +38,10 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  callBack() {
+    print("Call back click");
+  }
+
   @override
   Widget build(BuildContext context) {
     var arrNames = ['muneeb', 'hammad', 'josh', 'john', 'doe'];
@@ -47,39 +51,9 @@ class _MyHomePageState extends State<MyHomePage> {
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           title: const Text("First Flutter App1"),
         ),
-        body: Center(
-            child:
-                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-          const Text(
-            "Selected date",
-            style: TextStyle(fontSize: 20),
-          ),
-          ElevatedButton(
-              onPressed: () async {
-                DateTime? datePicked = await showDatePicker(
-                    context: context,
-                    initialDate: DateTime.now(),
-                    firstDate: DateTime(2010),
-                    lastDate: DateTime(2025));
-
-                if (datePicked != null) {
-                  print("Date select: ${datePicked.year}");
-                }
-              },
-              child: const Text('Show date')),
-          ElevatedButton(
-              onPressed: () async {
-                TimeOfDay? timePicked = await showTimePicker(
-                    context: context,
-                    initialTime: TimeOfDay.now(),
-                    initialEntryMode: TimePickerEntryMode.input);
-
-                if (timePicked != null) {
-                  print(
-                      "Date select: ${timePicked.hour}: ${timePicked.minute}");
-                }
-              },
-              child: const Text('Show Time'))
-        ])));
+        body: ElevatedButton(
+          child: Text('Click Me!'),
+          onPressed: callBack,
+        ));
   }
 }
