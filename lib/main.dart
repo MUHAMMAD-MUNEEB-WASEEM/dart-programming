@@ -38,8 +38,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  callBack() {
-    print("Call back click");
+  callBack(text) {
+    print(text);
   }
 
   @override
@@ -53,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body: ElevatedButton(
           child: Text('Click Me!'),
-          onPressed: callBack,
+          onPressed: () => callBack('hi'),
         ));
   }
 }
