@@ -1,6 +1,4 @@
-import 'package:first_test_app/ui_helper/util.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,10 +36,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  callBack(text) {
-    print(text);
-  }
-
   @override
   Widget build(BuildContext context) {
     var arrNames = ['muneeb', 'hammad', 'josh', 'john', 'doe'];
@@ -51,9 +45,60 @@ class _MyHomePageState extends State<MyHomePage> {
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           title: const Text("First Flutter App1"),
         ),
-        body: ElevatedButton(
-          child: Text('Click Me!'),
-          onPressed: () => callBack('hi'),
+        body: Container(
+          child: Column(children: [
+            Expanded(
+                flex: 2,
+                child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: 10,
+                    itemBuilder: (context, index) => const Padding(
+                        padding: EdgeInsets.all(11.0),
+                        child: SizedBox(
+                          width: 100,
+                          child: CircleAvatar(backgroundColor: Colors.green),
+                        )))),
+            Expanded(
+                flex: 4,
+                child: Container(
+                  color: Colors.blue,
+                  child: ListView.builder(
+                      itemBuilder: (context, index) => const Padding(
+                          padding: EdgeInsets.all(11.0),
+                          child: ListTile(
+                            leading: CircleAvatar(backgroundColor: Colors.red),
+                            title: Text('Name'),
+                            subtitle: Text('Mob No'),
+                            trailing: Icon(Icons.verified_user),
+                          ))),
+                )),
+            Expanded(
+              flex: 2,
+              child: Container(
+                color: Colors.red,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount:
+                      10, // Make sure to replace `itemCount` with the actual number of items
+                  itemBuilder: (context, index) => Padding(
+                    padding:
+                        const EdgeInsets.all(8.0), // Adjust padding as needed
+                    child: SizedBox(
+                      width: 200, // Adjust width as needed
+                      height: 50, // Adjust height as needed
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(11),
+                          color: Colors.blue,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Expanded(flex: 2, child: Container(color: Colors.yellow)),
+          ]),
         ));
   }
 }
